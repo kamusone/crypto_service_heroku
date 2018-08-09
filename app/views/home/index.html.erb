@@ -1,5 +1,24 @@
 
-<div class="dropdown">
-<h1> Welcome ! Choose a crypto </h1>
+<!-- <div class="dropdown">
+
 <p> <%= select_tag "crypto_id", options_from_collection_for_select(CreateCrypto.all, "id", "name") %> </p>
-</div>
+</div> -->
+
+<h1> Welcome ! Choose a crypto </h1>
+ <form action="indice_crypto">
+
+ <select name="crypto_form">
+   <% @hash_crypto.each  do |key, n|  %>
+    <option value=<%=n%> ><%= key %></option>
+
+  <% end %>
+</select>
+ <br><br>
+
+ <input type="submit">
+</form>
+
+
+<p>
+  Voici le cours actuel est de la crypto :  <%= @value %>
+</p>

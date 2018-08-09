@@ -1,2 +1,5 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+
+<div class="dropdown">
+<h1> Welcome ! Choose a crypto </h1>
+<p> <%= select_tag "crypto_id", options_from_collection_for_select(CreateCrypto.all, "id", "name") %> </p>
+</div>
